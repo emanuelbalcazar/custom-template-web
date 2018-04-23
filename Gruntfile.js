@@ -49,15 +49,15 @@ module.exports = function (grunt) {
         }
     });
 
-    // register all tasks here... 
+    // register all tasks here.
     grunt.registerTask('default', ['shell:config_prod']);
     grunt.registerTask('install', ['shell:npm_install', 'shell:bower_install']);
 
+    // execute jshint.
     grunt.registerTask('lint', ['jshint']);
     grunt.registerTask('lint:frontend', ['jshint:frontend']);
     grunt.registerTask('lint:backend', ['jshint:backend']);
 
-    // update the dependencies of the package.json.
+    // update all the dependencies of the package.json.
     grunt.registerTask('update', ['shell:update']);
-
 };
