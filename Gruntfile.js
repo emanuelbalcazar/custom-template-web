@@ -1,6 +1,6 @@
 /**
  * Grunt configuration file.
- * Automate the tasks commonly performed. 
+ * Automate the tasks commonly performed.
  */
 module.exports = function (grunt) {
 
@@ -52,6 +52,7 @@ module.exports = function (grunt) {
     // register all tasks here.
     grunt.registerTask('default', ['shell:config_prod']);
     grunt.registerTask('install', ['shell:npm_install', 'shell:bower_install']);
+    grunt.registerTask('devel', ['shell:config_devel']);
 
     // execute jshint.
     grunt.registerTask('lint', ['jshint']);
