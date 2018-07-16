@@ -7,6 +7,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const compression = require('compression');
 const morgan = require('morgan');
+const helmet = require('helmet');
 
 // get the application settings.
 const config = require('./config/configuration');
@@ -16,6 +17,7 @@ const app = express();
 
 // configure all environments.
 app.use(morgan('dev'));
+app.use(helmet());
 app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
